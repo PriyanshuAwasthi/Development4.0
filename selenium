@@ -1,0 +1,11 @@
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+
+PATH = "C:\Program Files (x86)\chromedriver.exe"
+driver = webdriver.Chrome(PATH)
+
+driver.get("https://collegedunia.com/india-colleges")
+
+search = driver.find_element_by_class_name("jsx-3107713825 search_wrap")
+search.send_keys("engineering")
+search.send_keys(Keys.RETURN)
